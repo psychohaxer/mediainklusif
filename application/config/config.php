@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+date_default_timezone_set('Asia/Jakarta');
 /*
 |--------------------------------------------------------------------------
 | Base Site URL
@@ -23,7 +24,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = '';
+if (file_exists(__DIR__ . '/../../.env')) {
+    $dotenv = parse_ini_file(__DIR__ . '/../../.env');
+    foreach ($dotenv as $key => $value) {
+        putenv("$key=$value");
+    }
+}
+
+$config['base_url'] = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? "https" : "http") . "://$_SERVER[HTTP_HOST]/" . getenv('APP_BASE_PATH') . "/";
 
 /*
 |--------------------------------------------------------------------------
