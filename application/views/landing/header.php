@@ -8,7 +8,7 @@
     <title>Media Jurnalistik Inklusif - <?= $page_title ?></title>
 
     <!-- Favicons -->
-    <link href="<?= base_url('assets/img/fav.png') ?>" rel="icon">
+    <link href="<?= base_url('assets/img/logo-trans.png') ?>" rel="icon">
     <link href="<?= base_url('assets/img/apple-touch-icon.png') ?>" rel="apple-touch-icon">
 
     <!-- Mazer CSS -->
