@@ -66,8 +66,20 @@
                             <div class="submenu">
                                 <div class="submenu-group-wrapper">
                                     <ul class="submenu-group">
-                                        <li class="submenu-item">
-                                            <a href="#" class='submenu-link'>Jurnalistik Inklusif</a>
+                                        <li class="submenu-item has-sub">
+                                            <a href="#" class="submenu-link">Jurnalistik Inklusif</a>
+                                            <!-- 3 Level Submenu -->
+                                            <ul class="subsubmenu">
+                                                <li class="subsubmenu-item">
+                                                    <a href="<?= base_url('pengenalan_jurnalistik') ?>" class="subsubmenu-link">Pengenalan Jurnalisme</a>
+                                                </li>
+                                                <li class="subsubmenu-item">
+                                                    <a href="<?= base_url('wawancara') ?>" class="subsubmenu-link">Panduan Wawancara</a>
+                                                </li>
+                                                <li class="subsubmenu-item">
+                                                    <a href="<?= base_url('produk_jurnalistik') ?>" class="subsubmenu-link">Produk Jurnalistik</a>
+                                                </li>
+                                            </ul>
                                         </li>
                                         <li class="submenu-item">
                                             <a href="#" class='submenu-link'>Kearifan Lokal</a>
